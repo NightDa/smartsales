@@ -1,0 +1,64 @@
+/* ── Google Fonts ──────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ── Design Tokens ─────────────────────────────────────────────────────────── */
+:root {
+  /* Colors — dark base */
+  --bg-base:       #0d0f12;
+  --bg-base-rgb:   13, 15, 18;
+  --bg-surface:    #13161b;
+  --bg-hover:      #1c2028;
+  --bg-input:      #171a1f;
+
+  --border:        #252930;
+
+  --text-primary:  #f0f2f5;
+  --text-secondary:#9ba3af;
+  --text-muted:    #5c6370;
+
+  /* Accent — electric teal */
+  --accent:         #00d4aa;
+  --accent-subtle:  rgba(0, 212, 170, 0.1);
+
+  /* Semantic */
+  --success:        #34d399;
+  --success-subtle: rgba(52, 211, 153, 0.1);
+  --danger:         #f87171;
+  --danger-subtle:  rgba(248, 113, 113, 0.1);
+  --warning:        #fbbf24;
+  --warning-subtle: rgba(251, 191, 36, 0.1);
+
+  /* Typography */
+  --font-display: 'Syne', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+}
+
+/* ── Reset ──────────────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: var(--bg-base);
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input, select, textarea, button {
+  font-family: var(--font-body);
+}
+
+/* ── Scrollbars ─────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+/* ── Selection ──────────────────────────────────────────────────────────────── */
+::selection { background: var(--accent-subtle); color: var(--accent); }
