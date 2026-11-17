@@ -1,8 +1,8 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { CommonModule, CurrencyPipe, TitleCasePipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { DashboardService, AnomalyService } from '../../../core/services/api.services';
-import { DashboardStats, Anomaly, LeadStatus } from '../../../core/models';
+import { DashboardService, AnomalyService } from '../../core/services/api.services';
+import { DashboardStats, Anomaly, LeadStatus } from '../../core/models';
 
 const STATUS_ORDER: LeadStatus[] = [
   'new', 'contacted', 'qualified', 'proposal', 'negotiation', 'closed_won', 'closed_lost'

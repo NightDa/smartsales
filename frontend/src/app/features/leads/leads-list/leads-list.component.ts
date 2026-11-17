@@ -21,7 +21,7 @@ import { AiSearchComponent } from '../../ai/ai-search.component';
         <a routerLink="/leads/new" class="btn-primary">+ New Lead</a>
       </header>
 
-      <app-ai-search (filtersChanged)="applyAiFilters($event)" (filtersCleared)="clearAiFilters()"></app-ai-search>
+      <app-ai-search (filtersApplied)="applyAiFilters($any($event))"></app-ai-search>
 
       <div class="toolbar">
         <input type="search" class="search-input" placeholder="Search leads, contacts, companies…" [formControl]="searchCtrl" />

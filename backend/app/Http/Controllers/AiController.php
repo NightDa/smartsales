@@ -9,8 +9,6 @@ use Illuminate\Support\Facades\Http;
 
 class AiController extends Controller
 {
-    public function __construct() { $this->middleware('auth:api'); }
-
     public function filterBuilder(Request $request): JsonResponse
     {
         $request->validate(['query' => 'required|string|max:300']);

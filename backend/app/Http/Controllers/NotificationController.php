@@ -5,8 +5,6 @@ use Illuminate\Http\JsonResponse;
 
 class NotificationController extends Controller
 {
-    public function __construct() { $this->middleware('auth:api'); }
-
     public function index(): JsonResponse
     {
         $user = auth('api')->user();

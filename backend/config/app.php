@@ -14,7 +14,4 @@ return [
     'previous_keys'   => [],
     'maintenance'     => ['driver' => 'file'],
 
-    'providers' => [
-        // These are auto-discovered via bootstrap/providers.php
-    ],
 ];

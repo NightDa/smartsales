@@ -1,15 +1,24 @@
 <?php
+
 namespace App\Providers;
 
-use App\Models\Lead;
-use App\Observers\LeadObserver;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Filesystem\Filesystem;
 
 class AppServiceProvider extends ServiceProvider
 {
-    public function register(): void {}
+    public function register(): void
+    {
+        // Force-register 'files' if not already bound
+        if (!$this->app->bound('files')) {
+            $this->app->singleton('files', function () {
+                return new Filesystem;
+            });
+        }
+    }
+
     public function boot(): void
     {
-        Lead::observe(LeadObserver::class);
+        // Lead::observe(LeadObserver::class); -- re-enable later
     }
 }

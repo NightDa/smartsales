@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy, signal } from '@angular/core';
 import { CommonModule, TitleCasePipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { Subject, debounceTime, distinctUntilChanged, takeUntil } from 'rxjs';
 import { CompanyService } from '../../../core/services/api.services';
 import { Company, Industry } from '../../../core/models';
@@ -9,7 +9,7 @@ import { Company, Industry } from '../../../core/models';
 @Component({
   selector: 'app-companies-list',
   standalone: true,
-  imports: [CommonModule, RouterLink, TitleCasePipe, ReactiveFormsModule],
+  imports: [CommonModule, RouterLink, TitleCasePipe, ReactiveFormsModule, FormsModule],
   template: `
     <div class="page">
       <header class="page-header">

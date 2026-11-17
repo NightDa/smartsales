@@ -22,6 +22,10 @@ export interface UsageResponse {
   estimated_cost_usd: number;
 }
 
+export interface SubjectsResponse {
+  subjects: string[];
+}
+
 @Injectable({ providedIn: 'root' })
 export class AiService {
   private readonly api = `${environment.apiUrl}/ai`;
@@ -38,5 +42,9 @@ export class AiService {
 
   usage() {
     return this.http.get<UsageResponse>(`${this.api}/usage`);
+  }
+
+  suggestSubjects(leadId: number) {
+    return this.http.get<SubjectsResponse>(`${this.api}/suggest-subject/${leadId}`);
   }
 }

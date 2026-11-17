@@ -7,8 +7,6 @@ use Illuminate\Support\Facades\Cache;
 
 class AnomalyController extends Controller
 {
-    public function __construct() { $this->middleware('auth:api'); }
-
     public function index(): JsonResponse
     {
         $user    = auth('api')->user();

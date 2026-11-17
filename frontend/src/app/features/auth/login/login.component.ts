@@ -66,11 +66,11 @@ import { AuthService } from '../../../core/services/auth.service';
           <div class="demo-title">Demo credentials</div>
           <div class="demo-row" (click)="fillDemo('admin@smartsales.dev')">
             <span class="demo-role admin">Admin</span>
-            <span>admin@smartsales.dev</span>
+            <span>admin&#64;smartsales.dev</span>
           </div>
           <div class="demo-row" (click)="fillDemo('john@smartsales.dev')">
             <span class="demo-role agent">Agent</span>
-            <span>john@smartsales.dev</span>
+            <span>john&#64;smartsales.dev</span>
           </div>
           <div class="demo-note">Password: <code>Password1</code></div>
         </div>
